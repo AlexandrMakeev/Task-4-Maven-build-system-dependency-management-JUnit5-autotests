@@ -37,13 +37,13 @@ public class BonusServiceTest {
     }
 
     @Test
-    void shouldCalculateForUnregistered() {
+    void shouldCalculateForUnregisteredUnderLimit() {
         BonusService service = new BonusService();
 
         // подготавливаем данные:
-        long amount = 1000000;
+        long amount = 3000;
         boolean registered = false;
-        long expected = 500;
+        long expected = 30;
 
         // вызываем целевой метод:
         long actual = service.calculate(amount, registered);
